@@ -1,0 +1,82 @@
+body {  
+    font-family: Arial, sans-serif;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100vh;  
+    margin: 0;  
+    background-color: #f4f4f4;  
+}  
+
+.calculator {  
+    background-color: #fff;  
+    border: 3px solid black;  /* Changed border color to black */  
+    border-radius: 0;  /* Removed border radius for sharp corners */  
+    padding: 20px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+    width: 400px;  /* Set width to match modified layout */  
+    height: auto; /* Allows height to adjust based on content */  
+}  
+
+#display {  
+    width: 95%;  
+    height: 50px;  
+    text-align: right;  
+    font-size: 1.5em;  
+    margin-bottom: 10px;  
+    padding: 10px;  
+    border: 1px solid black;  
+    border-radius: 0;  
+    background-color: #f8f8f8;  
+}  
+
+.buttons {  
+    display: grid;  
+    grid-template-columns: repeat(5, 1fr);  
+    gap: px;  /* Adjusted gap for tighter button layout */  
+}  
+
+button {  
+    padding: 12px;  
+    font-size: 1.5em;  
+    cursor: pointer;  
+    border: 1px solid black;  
+    border-radius: 0;  
+    background-color: transparent;  /* Removed background color */  
+    transition: background-color 0.3s ease-in-out;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}  
+
+button:hover {  
+    background-color: #ddd;  
+}  
+
+button:active {  
+    background-color: #ccc;  
+}  
+
+button.clear {  
+    color: black;  /* Reset color for clear button */  
+}  
+
+button.clear:hover {  
+    background-color: #ddd;  
+}  
+
+button.clear {  
+    grid-column: span 2;  
+    background-color: transparent;  
+    color: black;  
+}
+
+button.equals {  
+    grid-column: span 2;  
+    background-color: transparent;  
+    color: black;  
+}  
+
+button.equals:hover {  
+    background-color: #ddd;  
+}

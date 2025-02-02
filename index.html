@@ -1,0 +1,93 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Scientific Calculator</title>  
+    <link rel="stylesheet" href="styles.css">  
+    <style>  
+        .calculator {  
+            border: 3px solid black;  
+            width: 450px;  
+            padding: 10px;  
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);  
+        }  
+        .buttons {  
+            display: grid;  
+            grid-template-columns: repeat(5, 1fr);  
+            gap: 10px;  
+        }  
+        .btn {  
+            padding: 15px;  
+            font-size: 20px;  
+            border: 1px solid black;  
+            cursor: pointer;  
+        }  
+        .equals {  
+            grid-column: span 2; /* Span across two columns to place it at the bottom right */  
+        }  
+        .display {
+            width: 100.5%;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 24px;
+            text-align: right;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+    </style>  
+</head>  
+<body>  
+    <div class="calculator">  
+        <input type="text" id="display" class="display" autocomplete="off">  
+        <div class="buttons">  
+            <!-- Row 1 -->  
+            <button class="btn" onclick="appendValue('7')">7</button>  
+            <button class="btn" onclick="appendValue('8')">8</button>  
+            <button class="btn" onclick="appendValue('9')">9</button>  
+            <button class="btn" onclick="appendValue('/')">/</button>  
+            <button class="btn" onclick="appendValue('sqrt(')">√</button>  
+
+            <!-- Row 2 -->  
+            <button class="btn" onclick="appendValue('4')">4</button>  
+            <button class="btn" onclick="appendValue('5')">5</button>  
+            <button class="btn" onclick="appendValue('6')">6</button>  
+            <button class="btn" onclick="appendValue('*')">*</button>  
+            <button class="btn" onclick="appendValue('**')">^</button>  
+
+            <!-- Row 3 -->  
+            <button class="btn" onclick="appendValue('1')">1</button>  
+            <button class="btn" onclick="appendValue('2')">2</button>  
+            <button class="btn" onclick="appendValue('3')">3</button>  
+            <button class="btn" onclick="appendValue('-')">-</button>   
+            <button class="btn" onclick="appendValue('+')">+</button>
+            <!-- Row 4 -->  
+            <button class="btn" onclick="appendValue('0')">0</button>  
+            <button class="btn" onclick="appendValue('.')">.</button>  
+            <button class="btn clear" onclick="clearDisplay()">C</button>    
+            <button class="btn" onclick="clearEntry()">CE</button>
+            <!-- Row 5 -->  
+            <button class="btn" onclick="appendValue('(')">(</button>  
+            <button class="btn" onclick="appendValue(')')">)</button>  
+            <button class="btn" onclick="appendValue('Math.sin(')">sin</button>  
+            <button class="btn" onclick="appendValue('Math.cos(')">cos</button>  
+            <button class="btn" onclick="appendValue('Math.tan(')">tan</button>  
+
+            <!-- Row 6 -->  
+            <button class="btn" onclick="appendValue('Math.log10(')">log10</button>  
+            <button class="btn" onclick="calculatePercentage()">%</button>  
+            <button class="btn" onclick="calculateFactorial()">!</button>  
+            <button class="btn" onclick="appendValue('Math.PI')">π</button>  
+            <button class="btn" onclick="appendValue('Math.exp(')">exp</button>  
+              
+            <!-- Row 7 --> 
+            <button class="btn" onclick="appendValue('Math.asin(')">asin</button>  
+            <button class="btn" onclick="appendValue('Math.acos(')">acos</button>  
+            <button class="btn" onclick="appendValue('Math.atan(')">atan</button>
+            <button class="btn equals" onclick="calculateResult()">=</button>
+        </div>  
+    </div>  
+
+    <script src="script.js"></script>  
+</body>  
+</html>
